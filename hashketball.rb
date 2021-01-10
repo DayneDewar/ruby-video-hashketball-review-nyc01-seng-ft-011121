@@ -192,3 +192,7 @@ def player_stats(player)
   end
   stats
 end
+
+def big_shoe_rebound
+  
+end

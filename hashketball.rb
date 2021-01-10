@@ -213,7 +213,7 @@ end
 
 def most_points_scored
   points = 0
-  most_point_player = []
+  most_point_player = ""
   game_hash.each do |k, v|
     v[:players].each do |starting_five|
       if starting_five[:points] > points
@@ -222,7 +222,7 @@ def most_points_scored
     end
     v[:players].each do |starting_five|
       if starting_five[:points] == points
-        most_point_player << starting_five[:player_name]
+        most_point_player = starting_five[:player_name]
       end
     end
   end

@@ -213,5 +213,18 @@ end
 
 def most_points_scored
   points = 0
-  most_points = ""
+  most_point_player = ""
+  game_hash.each do |k, v|
+    v[:players].each do |starting_five|
+      if starting_five[:points] > points
+        points = starting_five[:points]
+      end
+    end
+    v[:players].each do |starting_five|
+      if starting_five[:points] == points
+        most_point_player = starting_five[:player_name]
+      end
+    end
+  end
+  most_point_player
 end

@@ -162,7 +162,8 @@ def team_colors(team)
 end
 
 def team_names
+  teams = [] 
   game_hash.each do |k, v|
-    v[:team_name]
+    teams << v[:team_name]
   end
 end

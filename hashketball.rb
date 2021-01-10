@@ -186,7 +186,7 @@ def player_stats(player)
   game_hash.each do |k, v|
     v[:players].each do |starting_five|
       if starting_five[:player_name] == player
-        stats << starting_five
+        stats = starting_five
       end
     end
   end

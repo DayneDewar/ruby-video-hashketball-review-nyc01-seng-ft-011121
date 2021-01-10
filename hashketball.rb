@@ -168,3 +168,16 @@ def team_names
   end
   teams
 end
+
+def player_numbers(team)
+  jersey_numbers =[]
+  game_hash.each do |k, v|
+    if v[:team_name] == team
+      v[:players].each do |starting_five|
+        jersey_numbers << starting_five[:number]
+      end
+    end
+  end
+  jersey_numbers
+end
+  

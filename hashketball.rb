@@ -210,3 +210,8 @@ def big_shoe_rebounds
   end
   rebound
 end
+
+def most_points_scored
+  points = 0
+  most_points = ""
+end

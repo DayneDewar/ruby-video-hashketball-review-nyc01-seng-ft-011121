@@ -182,11 +182,13 @@ def player_numbers(team)
 end
 
 def player_stats(player)
+  stats = {}
   game_hash.each do |k, v|
-    v[:players] do |starting_five|
+    v[:players.each] do |starting_five|
       if starting_five[:player_name] == player
-        return starting_five
+        stats << starting_five
       end
     end
   end
+  stats
 end

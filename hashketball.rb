@@ -184,7 +184,7 @@ end
 def player_stats(player)
   stats = {}
   game_hash.each do |k, v|
-    v[:players.].each do |starting_five|
+    v[:players].each do |starting_five|
       if starting_five[:player_name] == player
         stats << starting_five
       end

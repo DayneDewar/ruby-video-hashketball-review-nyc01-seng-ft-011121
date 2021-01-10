@@ -166,4 +166,5 @@ def team_names
   game_hash.each do |k, v|
     teams << v[:team_name]
   end
+  teams
 end

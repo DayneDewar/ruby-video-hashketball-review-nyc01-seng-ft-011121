@@ -163,6 +163,6 @@ end
 
 def team_names
   game_hash.each do |k, v|
-    v[team_name]
+    v[:team_name]
   end
 end

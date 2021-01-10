@@ -194,5 +194,19 @@ def player_stats(player)
 end
 
 def big_shoe_rebounds
-  
+  shoe = 0
+  rebound = 0
+  game_hash.each do |k, v|
+    v[:players].each do |starting_five|
+      if starting_five[:shoe] > shoe
+        shoe = starting_five[:shoe]
+      end
+    end
+    v[:players].each do |starting_five|
+      if starting_five[:shoe] == shoe
+        rebound = starting_five[:rebounds]
+      end
+    end
+  end
+  rebound
 end
